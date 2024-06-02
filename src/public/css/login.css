@@ -1,0 +1,12 @@
+.header-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.error-message {
+    display: block;
+    color: red;
+    margin-top: 5px; /* メッセージと入力フィールドの間のスペースを設定 */
+}

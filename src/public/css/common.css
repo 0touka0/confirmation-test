@@ -1,0 +1,27 @@
+.header {
+    background-color: #ffffff;
+    border-bottom: solid 1px #8b7969;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1500px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__heading {
+    color: #8b7969;
+    font-size: 40px;
+    font-weight: bold;
+}
