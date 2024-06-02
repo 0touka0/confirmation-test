@@ -29,8 +29,6 @@ Laravel環境構築
 
 ## URL
 - 開発環境：http://localhost/
-- 開発環境：http://localhost/confirm
-- 開発環境：http://localhost/thanks
 - 開発環境：http://localhost/register
 - 開発環境：http://localhost/login
 - 開発環境：http://localhost/admin
