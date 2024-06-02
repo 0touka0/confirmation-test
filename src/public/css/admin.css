@@ -5,3 +5,21 @@
     margin-right: 20px;
 }
 
+.pagination {
+    font-size: 14px; /* ページネーション全体のフォントサイズを設定 */
+}
+
+.pagination .page-item .page-link {
+    padding: 0.5rem 0.75rem; /* 各ページリンクのパディングを調整 */
+    font-size: 14px; /* 各ページリンクのフォントサイズを設定 */
+}
+
+.pagination .total {
+    display: none;
+}
+
+svg.w-5.h-5 {
+    /*paginateメソッドの矢印の大きさ調整のために追加*/
+    width: 30px;
+    height: 30px;
+}

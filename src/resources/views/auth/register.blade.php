@@ -27,7 +27,7 @@
         <form class="register-form" action="/register" method="post">
             @csrf
             <div class="register-form__item">
-                {{-- 名前 --}}
+                {{-- お名前 --}}
                 <div class="register-form__item-list">
                     <div class="item-list__title">
                         <label for="name">お名前</label>

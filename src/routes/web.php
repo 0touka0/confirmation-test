@@ -29,6 +29,8 @@ Route::get('/admin', [AdminController::class, 'admin']);
 // Route::middleware('auth')->group(function () {
 //     Route::get('/admin', [adminController::class, 'admin']);
 // });
+//お問い合わせ検索
+Route::post('/find', [AdminController::class, 'search']);
 
 //管理画面のログアウト先の指定
 Route::get('/logout', function () {

@@ -18,12 +18,13 @@
     </nav>
 @endsection
 
+{{-- 管理画面ページ --}}
 @section('content')
     <div class="admin-content">
         <div class="admin-content__heading">
             <h2>Admin</h2>
         </div>
-        <form class="search-form" action="{{-- /find（未作成） --}}" method="post">
+        <form class="search-form" action="/find" method="post">
             @csrf
             <div class="search-form__list">
                 <input class="search-form__list--text-input" type="text" name="query" placeholder="名前やメールアドレスを入力してください">
@@ -36,7 +37,7 @@
                 <select name="content">
                     <option value="">お問い合わせの種類</option>
                     @foreach ($categories as $category)
-                        <option value="{{ $category['content'] }}">{{ $category['content'] }}</option>
+                        <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
                     @endforeach
                 </select>
                 <input type="date" name="date">
@@ -53,18 +54,21 @@
                 <th>お問い合わせの種類</th>
                 <th></th>
             </tr>
-            {{-- @foreach ($ as $)
+            @if (@isset($contacts))
+            @foreach ($contacts as $contact)
                 <tr>
-                    <td>{{ $->name }}</td>
-                    <td>{{ $->gender }}</td>
-                    <td>{{ $->email }}</td>
-                    <td>{{ $->content }}</td>
+                    <td>{{ $contact->first_name }}</td>
+                    <td>{{ $contact->last_name }}</td>
+                    <td>{{ $contact->gender }}</td>
+                    <td>{{ $contact->email }}</td>
+                    <td>{{ $contact->category->content }}</td>
                     <td><button class="details-button">詳細</button></td>
                 </tr>
-            @endforeach --}}
+            @endforeach
+            <div class="pagination">
+            {{ $contacts->links() }}
+        </div>
+            @endif
         </table>
-        {{-- <div class="pagination">
-            {{ $->links() }}
-        </div> --}}
     </div>
 @endsection
